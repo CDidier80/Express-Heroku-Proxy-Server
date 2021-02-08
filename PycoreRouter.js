@@ -1,3 +1,4 @@
+require("dotenv").config()
 const Router = require("express").Router()
 const axios = require('axios');
 
