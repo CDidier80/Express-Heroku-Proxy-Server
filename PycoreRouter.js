@@ -17,7 +17,10 @@ const jdoodleSecrets = {
 Router.post('/execute', async (req, res) => {
     try {
         const jdoodlePayload = {...req.body, ...jdoodleSecrets}
+        console.log("JDOODLE PAYLOAD: ", jdoodlePayload)
         const response = await ApiClient.post('', jdoodlePayload)
+        console.log("JDOODLE RESPONSE: ", response)
+        console.log("==============================================================")
         res.send(response.data)
     } catch (error) {
         console.log("TRY{}CATCH{} ERROR --> ", error)
