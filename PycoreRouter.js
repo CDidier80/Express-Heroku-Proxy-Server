@@ -1,4 +1,4 @@
-require("dotenv").config()
+require('dotenv').config()
 const Router = require("express").Router()
 const axios = require('axios');
 
@@ -10,13 +10,12 @@ const ApiClient = axios.create({
 })
 
 
-const jdoodleSecrets = {
-    clientId : process.env.JDOODLE_CLIENT_ID,
-    clientSecret : process.env.JDOODLE_CLIENT_SECRET
-}
-
 Router.post('/execute', async (req, res) => {
     try {
+        const jdoodleSecrets = {
+            clientId : process.env.JDOODLE_CLIENT_ID,
+            clientSecret : process.env.JDOODLE_CLIENT_SECRET
+        }
         const jdoodlePayload = {...req.body, ...jdoodleSecrets}
         console.log("JDOODLE PAYLOAD: ", jdoodlePayload)
         const response = await ApiClient.post('', jdoodlePayload)
