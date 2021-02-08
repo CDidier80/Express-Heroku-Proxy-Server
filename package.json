@@ -1,0 +1,25 @@
+{
+  "name": "collins-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Collin Didier <collin.didier80@gmail.com>",
+  "nodemonConfig": {},
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": ""
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
